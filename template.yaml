@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  onboarding-app
+  Sample SAM Template for onboarding-app
+
+Resources:
+  DocLambdaFunction:
+    Type: AWS::Serverless::Function 
+    Properties:
+      FunctionName: DocLambdaFunction
+      Timeout: 20
+      CodeUri: ./DocLambdaFunction
+      Handler: app.lambda_handler
+      Runtime: python3.12
